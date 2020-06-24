@@ -1,0 +1,66 @@
+.features {
+  @extend %container;
+
+  &-area {
+    @extend %section;
+  }
+
+  h2 {
+    @extend %visually-hidden;
+  }
+
+  ul {
+    display: flex;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+}
+
+.features-item {
+  width: calc((100%-90px) / 4);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+  .title,
+  .text {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .title {
+    @extend %section-title;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .text {
+    @extend %section-text;
+
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
+
+.features-icon {
+  display: block;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 4px;
+
+  background: $color-bg-secondary;
+
+  .icon {
+    width: 70px;
+    height: 70px;
+  }
+}

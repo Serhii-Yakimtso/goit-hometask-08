@@ -1,0 +1,47 @@
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+%outline {
+  outline: 1px solid tomato;
+}
+
+%link {
+  &:hover,
+  &:focus {
+    color: $color-accent;
+    cursor: pointer;
+  }
+}
+
+%link-icon {
+  fill: $color-accent;
+}
+%section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+%section-title {
+  color: $color-title-main;
+}
+
+%section-text {
+  color: $color-text-prime;
+}
+
+%container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  width: 1200px;
+}
