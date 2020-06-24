@@ -1,0 +1,76 @@
+.features-list {
+  @media screen and (min-width: $width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $width-desktop) {
+    flex-wrap: nowrap;
+  }
+}
+
+.features-item {
+  @media screen and (min-width: $width-tablet) {
+    width: calc((100% -4 * 15px) / 2);
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  }
+  @media screen and (min-width: $width-desktop) {
+    width: calc((100% -8 * 15px) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (max-width: $width-tablet - 1) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (max-width: $width-desktop - 1) {
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.features-icon {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+
+  background-color: $color-bg-grey;
+  border-radius: 4px;
+
+  & .icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.features-title {
+  margin-bottom: 10px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+
+  color: $color-title;
+
+  @media screen and (max-width: $width-tablet - 1) {
+    text-align: center;
+  }
+}
+
+.features-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: $color-text;
+}
