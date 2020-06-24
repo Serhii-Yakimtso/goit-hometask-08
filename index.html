@@ -21,20 +21,27 @@
     <!-- шапка -->
 
     <header>
-      <div class="page-header">
+      <div class="page-header container">
         <div class="logo">
           <a href="./index.html"><span class="logo-left">Web</span> Studio</a>
         </div>
+        <button type="button" class="button-menu"></button>
         <nav class="nav">
           <ul class="site-nav">
-            <li><a href="./index.html" class="link current-page">Студия</a></li>
-            <li><a href="./portfolio.html" class="link">Портфолио</a></li>
-            <li><a href="" class="link">Контакты</a></li>
+            <li class="nav-item">
+              <a href="./index.html" class="site-page current-page">Студия</a>
+            </li>
+            <li class="nav-item">
+              <a href="./portfolio.html" class="site-page">Портфолио</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="site-page">Контакты</a>
+            </li>
           </ul>
         </nav>
 
         <ul class="contacts">
-          <li>
+          <li class="contact-item">
             <a href="mailto:info@devstudio.com" class="mail-tel">
               <svg class="icon-contacts" width="16px" height="11.2px">
                 <use href="./images/sprite.svg#icon-header-mail"></use>
@@ -42,7 +49,7 @@
               info@devstudio.com
             </a>
           </li>
-          <li>
+          <li class="contact-item">
             <a href="tel:+380961111111" class="mail-tel">
               <svg class="icon-contacts" width="10px" height="14.94px">
                 <use href="./images/sprite.svg#icon-header-phone"></use>
