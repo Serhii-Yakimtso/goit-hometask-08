@@ -1,3 +1,7 @@
+.features {
+  background-color: $color-bg-white;
+}
+
 .features-list {
   @media screen and (min-width: $width-tablet) {
     display: flex;
@@ -10,13 +14,13 @@
 
 .features-item {
   @media screen and (min-width: $width-tablet) {
-    width: calc((100% -4 * 15px) / 2);
+    width: calc((100% - 2 * 15px) / 2);
     &:nth-child(2n + 1) {
       margin-right: 30px;
     }
   }
   @media screen and (min-width: $width-desktop) {
-    width: calc((100% -8 * 15px) / 4);
+    width: calc((100% - 4 * 15px) / 4);
     &:not(:last-child) {
       margin-right: 30px;
     }
