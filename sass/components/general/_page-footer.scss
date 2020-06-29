@@ -1,0 +1,202 @@
+.footer {
+  color: $color-text-footer;
+  background-color: $color-bg-footer;
+
+  @media screen and (max-width: $width-desktop - 1) {
+    text-align: center;
+  }
+
+  & .upper-part {
+    @media screen and (min-width: $width-tablet) and (max-width: $width-desktop - 1) {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+    @media screen and (min-width: $width-desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      margin-right: 94px;
+    }
+  }
+
+  & .footer-area {
+    @media screen and (min-width: $width-desktop) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+  }
+
+  & .logo {
+    display: block;
+    margin-bottom: 20px;
+
+    color: $color-text-footer;
+  }
+}
+
+.footer-address {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  & p:not(:last-child) {
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $width-desktop) {
+      margin-bottom: 9px;
+    }
+  }
+
+  & .text {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  @media screen and (max-width: $width-desktop - 1) {
+    margin-bottom: 60px;
+  }
+}
+
+.footer-join {
+  @media screen and (max-width: $width-tablet - 1) {
+    margin-bottom: 60px;
+  }
+}
+
+.join-head {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+
+.join-list {
+  display: flex;
+
+  @media screen and (max-width: $width-desktop - 1) {
+    justify-content: center;
+
+    margin-bottom: 60px;
+  }
+}
+
+.join-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent;
+      cursor: pointer;
+    }
+  }
+  .icon-social {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+}
+
+.form-subscription {
+}
+
+.subscription-head {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+
+.form-subscription {
+  @media screen and (min-width: $width-desktop) {
+    display: flex;
+  }
+}
+
+.input-subscription {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+  background-color: inherit;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  @media screen and (max-width: $width-tablet - 1) {
+    width: 100%;
+  }
+  @media screen and (min-width: $width-tablet) and (max-width: $width-desktop - 1) {
+    width: 450px;
+  }
+  @media screen and (min-width: $width-desktop) {
+    width: 358px;
+    margin-right: 12px;
+  }
+  @media screen and (max-width: $width-desktop - 1) {
+    margin-bottom: 20px;
+  }
+}
+
+.button-subscription {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  min-width: 200px;
+
+  align-items: center;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: currentColor;
+  background-color: $color-accent;
+  cursor: pointer;
+
+  @media screen and (max-width: $width-desktop - 1) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .icon-send {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+  }
+}
