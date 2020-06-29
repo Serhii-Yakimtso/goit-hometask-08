@@ -1,0 +1,265 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.order {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  padding: 40px;
+
+  @media screen and (max-width: $width-desktop - 1) {
+    // min-width: 450px;
+    // min-height: 609px;
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (min-width: $width-desktop) {
+    // min-width: 528px;
+    // min-height: 581px;
+    width: 528px;
+    height: 581px;
+  }
+
+  background-color: $color-bg-white;
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.order-title {
+  margin-bottom: 30px;
+
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @media screen and (max-width: $width-desktop - 1) {
+    line-height: 1.5;
+  }
+  @media screen and (min-width: $width-desktop) {
+    line-height: 1.15;
+  }
+
+  color: $color-title;
+}
+
+.order-name,
+.order-tel,
+.order-email,
+.order-comment {
+  position: relative;
+
+  display: block;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: $color-text;
+}
+
+.order-agree {
+  position: relative;
+
+  display: block;
+
+  font-weight: normal;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  @media screen and (max-width: $width-desktop - 1) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  @media screen and (min-width: $width-desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.agree > a {
+  color: $color-accent;
+  text-decoration: underline;
+}
+
+.order-name,
+.order-tel,
+.order-email {
+  margin-bottom: 28px;
+}
+
+.order-comment {
+  margin-bottom: 20px;
+}
+
+.order-agree {
+  margin-bottom: 31px;
+}
+
+.order-name > input,
+.order-tel > input,
+.order-email > input,
+.order-comment > textarea {
+  display: block;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: $color-text;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.order-name > input,
+.order-tel > input,
+.order-email > input {
+  padding-left: 42px;
+  padding-right: 16px;
+  height: 40px;
+}
+
+.order-comment > textarea {
+  resize: none;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  height: 120px;
+}
+
+.order-name .name,
+.order-tel .tel,
+.order-email .email {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+
+  transform: translateY(-50%);
+  transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    left 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-comment .comment {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:not(:placeholder-shown) + .name,
+.form-input:not(:placeholder-shown) + .tel,
+.form-input:not(:placeholder-shown) + .email,
+.form-input:not(:placeholder-shown) + .comment {
+  top: -10px;
+  left: 16px;
+  color: $color-accent;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  fill: $color-title;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:not(:placeholder-shown) ~ .form-icon {
+  fill: $color-accent;
+}
+
+// .checkbox {
+//   @extend %visually-hidden;
+// }
+.agree {
+  @media screen and (max-width: $width-desktop - 1) {
+    padding-left: 23px;
+  }
+  @media screen and (min-width: $width-desktop) {
+    padding-left: 36px;
+  }
+}
+
+.icon-checkbox,
+.icon-noncheckbox {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  @media screen and (max-width: $width-desktop - 1) {
+    left: 0px;
+  }
+  @media screen and (min-width: $width-desktop) {
+    left: 13px;
+  }
+
+  width: 15px;
+  height: 15px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-checkbox {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .icon-checkbox {
+  opacity: 1;
+}
+.checkbox:checked ~ .icon-noncheckbox {
+  opacity: 0;
+}
+
+.button-send {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background: $color-bg-white;
+}
+
+.form-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 11px;
+  height: 11px;
+}
