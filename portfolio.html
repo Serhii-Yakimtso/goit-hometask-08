@@ -21,22 +21,29 @@
   <body>
     <!-- шапка -->
     <header>
-      <div class="page-header">
+      <div class="page-header container">
         <div class="logo">
           <a href="./index.html"><span class="logo-left">Web</span> Studio</a>
         </div>
+        <button type="button" class="button-menu"></button>
         <nav class="nav">
           <ul class="site-nav">
-            <li><a href="./index.html" class="link">Студия</a></li>
-            <li>
-              <a href="./portfolio.html" class="link current-page">Портфолио</a>
+            <li class="nav-item">
+              <a href="./index.html" class="site-page">Студия</a>
             </li>
-            <li><a href="" class="link">Контакты</a></li>
+            <li class="nav-item">
+              <a href="./portfolio.html" class="site-page current-page"
+                >Портфолио</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="" class="site-page">Контакты</a>
+            </li>
           </ul>
         </nav>
 
         <ul class="contacts">
-          <li>
+          <li class="contact-item">
             <a href="mailto:info@devstudio.com" class="mail-tel">
               <svg class="icon-contacts" width="16px" height="11.2px">
                 <use href="./images/sprite.svg#icon-header-mail"></use>
@@ -44,7 +51,7 @@
               info@devstudio.com
             </a>
           </li>
-          <li>
+          <li class="contact-item">
             <a href="tel:+380961111111" class="mail-tel">
               <svg class="icon-contacts" width="10px" height="14.94px">
                 <use href="./images/sprite.svg#icon-header-phone"></use>
@@ -58,29 +65,29 @@
 
     <!-- Портфолио -->
     <main>
-      <section class="portfolio">
-        <div class="portfolio-area">
+      <section class="portfolio section">
+        <div class="portfolio-area container">
           <!-- <h1>Наши работы</h1> необходимо скрыть -->
           <h1 class="visually-hidden">Наши работы</h1>
-          <ul class="filter">
-            <li class="item">
-              <button type="button" class="button">Все</button>
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button type="button" class="filter-button">Все</button>
             </li>
-            <li class="item">
-              <button type="button" class="button">Веб-сайты</button>
+            <li class="filter-item">
+              <button type="button" class="filter-button">Веб-сайты</button>
             </li>
-            <li class="item">
-              <button type="button" class="button">Приложения</button>
+            <li class="filter-item">
+              <button type="button" class="filter-button">Приложения</button>
             </li>
-            <li class="item">
-              <button type="button" class="button">Дизайн</button>
+            <li class="filter-item">
+              <button type="button" class="filter-button">Дизайн</button>
             </li>
-            <li class="item">
-              <button type="button" class="button">Маркетинг</button>
+            <li class="filter-item">
+              <button type="button" class="filter-button">Маркетинг</button>
             </li>
           </ul>
           <ul class="portfolio-cards">
-            <li class="item">
+            <li class="portfolio-item">
               <div class="card-area">
                 <a href="">
                   <div class="card-box">
@@ -103,7 +110,7 @@
                 </a>
               </div>
             </li>
-            <li class="item">
+            <li class="portfolio-item">
               <div class="card-area">
                 <a href="">
                   <div class="card-box">
@@ -126,7 +133,7 @@
                 </a>
               </div>
             </li>
-            <li class="item">
+            <li class="portfolio-item">
               <div class="card-area">
                 <a href="">
                   <div class="card-box">
@@ -149,7 +156,7 @@
                 </a>
               </div>
             </li>
-            <li class="item">
+            <li class="portfolio-item">
               <div class="card-area">
                 <a href="">
                   <div class="card-box">
@@ -172,7 +179,7 @@
                 </a>
               </div>
             </li>
-            <li class="item">
+            <li class="portfolio-item">
               <div class="card-area">
                 <a href="">
                   <div class="card-box">
@@ -195,7 +202,7 @@
                 </a>
               </div>
             </li>
-            <li class="item">
+            <li class="portfolio-item">
               <div class="card-area">
                 <a href="">
                   <div class="card-box">
@@ -218,7 +225,7 @@
                 </a>
               </div>
             </li>
-            <li class="item">
+            <li class="portfolio-item">
               <div class="card-area">
                 <a href="">
                   <div class="card-box">
@@ -242,7 +249,7 @@
                 </a>
               </div>
             </li>
-            <li class="item">
+            <li class="portfolio-item">
               <div class="card-area">
                 <a href="">
                   <div class="card-box">
@@ -265,7 +272,7 @@
                 </a>
               </div>
             </li>
-            <li class="item">
+            <li class="portfolio-item">
               <div class="card-area">
                 <a href="">
                   <div class="card-box">
@@ -294,11 +301,11 @@
       </section>
     </main>
     <!--Футер-->
-    <footer class="footer">
-      <div class="footer-area">
+    <footer class="footer section">
+      <div class="footer-area container">
         <div>
           <!-- LOGO -->
-          <a href="./index.html" class="logo"
+          <a href="./index.html" class="logo footer-logo"
             ><span class="logo-left">Web</span> Studio</a
           >
           <!-- Адресс компании -->
@@ -343,18 +350,16 @@
             </li>
           </ul>
         </div>
-
         <!-- Форма подписки на рассылку через почту -->
         <div class="footer-subscription">
           <b class="subscription-head">Подпишитесь на рассылку</b>
-          <!-- вставить форму -->
           <form class="form-subscription">
             <input
               class="input-subscription"
               type="email"
               placeholder="E-mail"
             />
-            <button type="button" class="button-subscription">
+            <button type="button" class="button-subscription button">
               Подписаться
               <svg class="icon-send">
                 <use href="./images/sprite.svg#icon-footer-send"></use>
