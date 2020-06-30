@@ -177,9 +177,14 @@
 
 .form-input:not(:placeholder-shown) + .name,
 .form-input:not(:placeholder-shown) + .tel,
-.form-input:not(:placeholder-shown) + .email,
-.form-input:not(:placeholder-shown) + .comment {
+.form-input:not(:placeholder-shown) + .email {
   top: -10px;
+  left: 16px;
+  color: $color-accent;
+}
+
+.form-input:not(:placeholder-shown) + .comment {
+  top: -18px;
   left: 16px;
   color: $color-accent;
 }

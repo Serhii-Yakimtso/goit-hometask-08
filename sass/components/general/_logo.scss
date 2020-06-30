@@ -11,6 +11,10 @@
     color: $color-accent;
   }
 
+  @media screen and (max-width: $width-desktop - 1) {
+    margin-right: 80px;
+  }
+
   @media screen and (min-width: $width-desktop) {
     font-size: 26px;
     line-height: 1.19;
