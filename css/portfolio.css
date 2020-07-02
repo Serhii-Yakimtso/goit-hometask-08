@@ -254,6 +254,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -323,6 +326,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .current-page {
+    display: inline-block;
     padding-bottom: 12px;
   }
 }

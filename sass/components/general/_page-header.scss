@@ -64,9 +64,9 @@
   }
   @media screen and (min-width: $width-tablet) {
     display: flex;
+    flex-grow: 1;
     justify-content: space-between;
     align-items: center;
-    // width: 100%;
   }
 }
 
@@ -125,6 +125,7 @@
   color: $color-accent;
 
   @media screen and (max-width: $width-tablet - 1) {
+    display: inline-block;
     padding-bottom: 12px;
   }
 
