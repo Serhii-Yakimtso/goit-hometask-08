@@ -7,5 +7,9 @@
 }
 
 %link-icon {
-  fill: $color-accent;
+  &:hover,
+  &:focus {
+    fill: $color-accent;
+    cursor: pointer;
+  }
 }

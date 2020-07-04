@@ -175,18 +175,29 @@
   transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-input {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    outline: 0;
+    border: 1px solid $color-accent;
+    cursor: pointer;
+  }
+}
+
 .form-input:not(:placeholder-shown) + .name,
 .form-input:not(:placeholder-shown) + .tel,
 .form-input:not(:placeholder-shown) + .email {
   top: -10px;
   left: 16px;
   color: $color-accent;
+  // border-color: $color-accent;
 }
 
 .form-input:not(:placeholder-shown) + .comment {
   top: -18px;
   left: 16px;
   color: $color-accent;
+  // border-color: $color-accent;
 }
 
 .form-icon {
@@ -258,6 +269,13 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background: $color-bg-white;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    outline: 0;
+    fill: $color-accent;
+    cursor: pointer;
+  }
 }
 
 .form-close {
