@@ -1,0 +1,11 @@
+%link {
+  &:hover,
+  &:focus {
+    color: $color-accent;
+    cursor: pointer;
+  }
+}
+
+%link-icon {
+  fill: $color-accent;
+}

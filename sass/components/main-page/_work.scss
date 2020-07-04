@@ -29,6 +29,18 @@
   position: relative;
 }
 
+.team-box {
+  height: 294px;
+
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
 .work-text {
   position: absolute;
   left: 0;
