@@ -232,6 +232,7 @@ body {
   }
   .menu-container.is-open {
     display: block;
+    z-index: 999;
   }
 }
 
